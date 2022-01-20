@@ -1,25 +1,27 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlay,
   faPause,
   faAngleLeft,
   faAngleRight,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
+import { useStateContext } from '../contexts/StateMusics';
 
-const Player = ({
-  currentSong,
-  isPlaying,
-  setIsPlaying,
-  audioRef,
-  setSongInfo,
-  songInfo,
-  songs,
-  setSongs,
-  setCurrentSong,
-}) => {
+const Player = ({ audioRef }) => {
+  // Context
+  const {
+    songs,
+    setSongs,
+    currentSong,
+    setCurrentSong,
+    isPlaying,
+    setIsPlaying,
+    songInfo,
+    setSongInfo,
+  } = useStateContext();
   // Use Effect
-const activeLibraryHandler = (nextPrev) => {
+  const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
         return {
@@ -49,7 +51,7 @@ const activeLibraryHandler = (nextPrev) => {
   // Format Time
   const getTime = (time) => {
     return (
-      Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
+      Math.floor(time / 60) + ':' + ('0' + Math.floor(time % 60)).slice(-2)
     );
   };
 
@@ -61,12 +63,12 @@ const activeLibraryHandler = (nextPrev) => {
 
   const skipTrackHandler = async (direction) => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
-    if (direction === "skip-forward") {
+    if (direction === 'skip-forward') {
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
       activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
       if (isPlaying) audioRef.current.play();
     }
-    if (direction === "skip-back") {
+    if (direction === 'skip-back') {
       if ((currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
         activeLibraryHandler(songs[songs.length - 1]);
@@ -102,11 +104,11 @@ const activeLibraryHandler = (nextPrev) => {
           <div style={trackAnimate} className="animate-track"></div>
         </div>
 
-        <p>{songInfo.duration ? getTime(songInfo.duration) : "0:00"}</p>
+        <p>{songInfo.duration ? getTime(songInfo.duration) : '0:00'}</p>
       </div>
       <div className="play-control">
         <FontAwesomeIcon
-          onClick={() => skipTrackHandler("skip-back")}
+          onClick={() => skipTrackHandler('skip-back')}
           className="skip-back"
           size="2x"
           icon={faAngleLeft}
@@ -118,7 +120,7 @@ const activeLibraryHandler = (nextPrev) => {
           icon={isPlaying ? faPause : faPlay}
         />
         <FontAwesomeIcon
-          onClick={() => skipTrackHandler("skip-forward")}
+          onClick={() => skipTrackHandler('skip-forward')}
           className="skip-forward"
           size="2x"
           icon={faAngleRight}

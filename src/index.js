@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+import { StateMusics } from './contexts/StateMusics';
 ReactDOM.render(
-  <React.StrictMode>
+  <StateMusics>
     <App />
-  </React.StrictMode>,
+  </StateMusics>,
   document.getElementById('root')
 );

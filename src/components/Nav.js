@@ -1,8 +1,11 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { useStateContext } from '../contexts/StateMusics';
 
-const Nav = ({ libraryStatus, setLibraryStatus }) => {
+const Nav = () => {
+  // Context
+  const { libraryStatus, setLibraryStatus } = useStateContext();
   return (
     <nav>
       <h1>Waves</h1>

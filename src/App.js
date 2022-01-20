@@ -1,36 +1,33 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 // Import styles
-import "./styles/app.scss";
+import './styles/app.scss';
 // Adding Components
-// import ErrorBoundary from "./components/ErrorBoundary";
-import Player from "./components/Player";
-import Song from "./components/Song";
-import Library from "./components/Library";
-import Nav from "./components/Nav";
-// Import Data
-import data from "./data";
+import Player from './components/Player';
+import Song from './components/Song';
+import Library from './components/Library';
+import Nav from './components/Nav';
+import { useStateContext } from './contexts/StateMusics';
 
 function App() {
   // Ref
   const audioRef = useRef(null);
-  //  State
-  const [songs, setSongs] = useState(data());
-  const [currentSong, setCurrentSong] = useState(songs[0]);
-  const [isPlaying, setIsPlaying] = useState(false);
-  // States
-  const [songInfo, setSongInfo] = useState({
-    currentTime: 0,
-    duration: 0,
-    animationPercentage: 0,
-  });
-  const [libraryStatus, setLibraryStatus] = useState(false);
+  // Context
+  const {
+    songs,
+    setSongs,
+    currentSong,
+    setCurrentSong,
+    isPlaying,
+    setIsPlaying,
+    songInfo,
+    setSongInfo,
+    libraryStatus,
+    setLibraryStatus,
+  } = useStateContext();
+
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
     const duration = e.target.duration;
-
-    // Claculate Percentage
-    // const roundedCurent = Math.round(current);
-    // const roundedDuration = Math.round(duration);
     const animationPercentage = Math.round((current / duration) * 100);
 
     setSongInfo({
@@ -48,30 +45,11 @@ function App() {
   };
 
   return (
-    <div className={`App ${libraryStatus ? "library-active" : ""}`}>
-      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
-      <Song currentSong={currentSong} />
-
-      <Player
-        audioRef={audioRef}
-        setIsPlaying={setIsPlaying}
-        isPlaying={isPlaying}
-        currentSong={currentSong}
-        songInfo={songInfo}
-        setSongInfo={setSongInfo}
-        songs={songs}
-        setCurrentSong={setCurrentSong}
-        setSongs={setSongs}
-      />
-
-      <Library
-        songs={songs}
-        setCurrentSong={setCurrentSong}
-        isPlaying={isPlaying}
-        audioRef={audioRef}
-        setSongs={setSongs}
-        libraryStatus={libraryStatus}
-      />
+    <div className={`App ${libraryStatus ? 'library-active' : ''}`}>
+      <Nav />
+      <Song />
+      <Player audioRef={audioRef} />
+      <Library audioRef={audioRef} />
       <audio
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
