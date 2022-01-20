@@ -1,0 +1,41 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(192, 192, 192) #ffffff00;
+  &::-webkit-scrollbar {
+    appearance: none;
+    --webkit-appearance: none;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    min-height: 50px;
+    background: rgb(192, 192, 192);
+    border-radius: 20px;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background: rgb(122, 122, 122);
+  }
+  h2 {
+    padding: 1rem 2rem;
+    font-style: italic;
+  }
+}
+.active-library {
+  transform: translate(0);
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .library {
+    width: 60%;
+  }
+}

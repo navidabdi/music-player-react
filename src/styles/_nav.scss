@@ -1,0 +1,29 @@
+nav {
+  h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+  }
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  button {
+    background: transparent;
+    cursor: pointer;
+    border: 2ps solid rgb(65, 65, 65);
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgb(65, 65, 65);
+      color: white;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
+    }
+  }
+}
