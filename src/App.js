@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 // Import styles
 import './styles/app.scss';
 // Adding Components
@@ -14,15 +14,12 @@ function App() {
   // Context
   const {
     songs,
-    setSongs,
     currentSong,
     setCurrentSong,
     isPlaying,
-    setIsPlaying,
     songInfo,
     setSongInfo,
     libraryStatus,
-    setLibraryStatus,
   } = useStateContext();
 
   const timeUpdateHandler = (e) => {
