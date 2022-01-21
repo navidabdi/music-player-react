@@ -38,6 +38,12 @@ h3 {
 .App {
   transition: all 0.5s ease;
 }
+.main-player {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .library-active {
   padding-left: 25%;
 }

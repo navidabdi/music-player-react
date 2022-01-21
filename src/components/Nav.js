@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <nav>
       <a href="/">
-        <h1>Waves</h1>
+        <h1>Waves Player</h1>
       </a>
       <div className="buttons">
         <DarkModeIcon />

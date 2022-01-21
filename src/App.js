@@ -47,9 +47,11 @@ function App() {
   return (
     <div className={`App ${libraryStatus ? 'library-active' : ''}`}>
       <Nav />
-      <Song />
-      <Player audioRef={audioRef} />
-      <Library audioRef={audioRef} />
+      <div className="main-player">
+        <Song />
+        <Player audioRef={audioRef} />
+        <Library audioRef={audioRef} />
+      </div>
       <audio
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
