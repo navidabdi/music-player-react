@@ -4,12 +4,36 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(245, 245, 245);
+  transition: all 0.5s ease-in-out;
+}
+body.dark {
+  background-color: rgb(67, 67, 73);
+}
+a {
+  text-decoration: none;
 }
 h1,
 h2,
 h3 {
-  color: rgb(14, 1, 87);
+  color: rgb(12, 8, 34);
+}
+.dark h1,
+.dark h2,
+.dark h3:not(.selected .song-description h3),
+.dark .time-control p {
+  color: rgb(210, 208, 226);
+}
+.dark button {
+  border-color: rgb(210, 208, 226);
+  color: rgb(210, 208, 226);
+}
+.dark .play-control svg path {
+  fill: rgb(210, 208, 226);
+}
+.dark .library {
+  background-color: rgb(9, 2, 51);
 }
 .App {
   transition: all 0.5s ease;
@@ -17,8 +41,8 @@ h3 {
 .library-active {
   padding-left: 25%;
 }
-@import "./player";
-@import "./song";
-@import "./library";
-@import "./librarySong";
-@import "./nav";
+@import './player';
+@import './song';
+@import './library';
+@import './librarySong';
+@import './nav';

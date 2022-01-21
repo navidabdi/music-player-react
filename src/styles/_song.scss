@@ -9,6 +9,13 @@
     width: 20%;
     border-radius: 50%;
     transform: all 0.5s ease;
+    filter: unset;
+  }
+  img.play {
+    animation: play 300s infinite;
+  }
+  img.puse {
+    animation: puse 1s ease-in;
   }
   h2 {
     padding: 2rem 1rem 0.5rem 1rem;
@@ -27,5 +34,21 @@
     img {
       width: 60%;
     }
+  }
+}
+@keyframes play {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+@keyframes puse {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }

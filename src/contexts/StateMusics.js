@@ -4,6 +4,9 @@ import data from '../data';
 const StateContext = createContext();
 
 export const StateMusics = ({ children }) => {
+  // Dark Mode State
+  const [darkMode, setDarkMode] = useState(false);
+
   // States
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
@@ -28,6 +31,8 @@ export const StateMusics = ({ children }) => {
         setSongInfo,
         libraryStatus,
         setLibraryStatus,
+        darkMode,
+        setDarkMode,
       }}
     >
       {children}
