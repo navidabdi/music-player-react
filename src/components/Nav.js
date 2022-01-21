@@ -11,11 +11,13 @@ const Nav = () => {
       <a href="/">
         <h1>Waves</h1>
       </a>
-      <button onClick={() => setLibraryStatus(!libraryStatus)}>
-        Library
-        <FontAwesomeIcon icon={faMusic} />
-      </button>
-      <DarkModeIcon />
+      <div className="buttons">
+        <DarkModeIcon />
+        <button onClick={() => setLibraryStatus(!libraryStatus)}>
+          Library
+          <FontAwesomeIcon icon={faMusic} />
+        </button>
+      </div>
     </nav>
   );
 };

@@ -8,6 +8,9 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  .buttons {
+    display: flex;
+  }
   button {
     background: transparent;
     cursor: pointer;
@@ -20,6 +23,7 @@ nav {
     }
   }
   .darkmode {
+    margin-right: 2rem;
     width: 40px;
     height: 40px;
     cursor: pointer;
