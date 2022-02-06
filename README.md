@@ -4,7 +4,7 @@ Demo: https://wave-musicplay.netlify.app/
 
 ## Light Mode:
 
-![Demo - Light Mode Desktop]()
+![Demo - New York]()
 
 ## Available Scripts
 
