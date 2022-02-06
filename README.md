@@ -4,7 +4,7 @@ Demo: https://wave-musicplay.netlify.app/
 
 ## Demo Video
 
-https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player.mp4
+https://user-images.githubusercontent.com/32398454/152678257-6bfda688-148c-4e7f-ab75-6918b5b415cd.mp4
 
 ## Light Mode Desktop
 
