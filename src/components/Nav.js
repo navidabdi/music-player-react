@@ -2,8 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import { useStateContext } from '../contexts/StateMusics';
-import DarkModeIcon from './DarkModeIcon';
+// import DarkModeIcon from './DarkModeIcon';
 import logo from '../img/logo.png';
+import DarkModeSwitch from './DarkModeSwitch';
 const Nav = () => {
   // Context
   const { libraryStatus, setLibraryStatus } = useStateContext();
@@ -14,7 +15,8 @@ const Nav = () => {
         <h1>Waves Player</h1>
       </a>
       <div className="buttons">
-        <DarkModeIcon />
+        {/* <DarkModeIcon /> */}
+        <DarkModeSwitch />
         <button onClick={() => setLibraryStatus(!libraryStatus)}>
           Library
           <FontAwesomeIcon className="library-icon" icon={faMusic} />
