@@ -2,6 +2,10 @@
 
 Demo: https://wave-musicplay.netlify.app/
 
+## Light Mode:
+
+![Demo - Light Mode Desktop]()
+
 ## Available Scripts
 
 In the project directory, you can run:
