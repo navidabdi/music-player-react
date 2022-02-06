@@ -1,5 +1,7 @@
 # Wave Music Player With React
 
+Demo: https://wave-musicplay.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
