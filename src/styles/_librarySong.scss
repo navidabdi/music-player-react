@@ -15,6 +15,9 @@
   &:hover {
     background-color: rgb(203, 255, 238);
   }
+  &:hover .song-description h3 {
+    color: #070313 !important;
+  }
   &:hover img {
     transform: rotateZ(-15deg);
   }

@@ -9,7 +9,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 body.dark {
-  background-color: rgb(67, 67, 73);
+  background-color: #070313;
 }
 a {
   text-decoration: none;
@@ -33,7 +33,7 @@ h3 {
   fill: rgb(210, 208, 226);
 }
 .dark .library {
-  background-color: rgb(9, 2, 51);
+  background-color: #1c1338;
 }
 .App {
   transition: all 0.5s ease;
