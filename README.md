@@ -2,9 +2,37 @@
 
 Demo: https://wave-musicplay.netlify.app/
 
-## Light Mode:
+## Light Mode Desktop
 
-![Demo - New York]()
+![Demo - Light Mode Desktop](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-1.png)
+
+## Light Mode Desktop Open Library
+
+![Demo - Light Mode Desktop Open Library](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-3.png)
+
+## Light Mode Mobile
+
+![Demo - Light Mode Mobile](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-5.png)
+
+## Light Mode Mobile Open Library
+
+![Demo - Light Mode Mobile Open Library](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-7.png)
+
+## Dark Mode Desktop
+
+![Demo - Dark Mode Desktop](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-2.png)
+
+## Dark Mode Desktop Open Library
+
+![Demo - Dark Mode Desktop Open Library](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-4.png)
+
+## Dark Mode Mobile
+
+![Demo - Dark Mode Mobile](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-6.png)
+
+## Dark Mode Mobile Open Library
+
+![Demo - Dark Mode Mobile Open Library](https://raw.githubusercontent.com/navidabdi/music-player-react/main/src/screenshots/Wave-Music-Player-8.png)
 
 ## Available Scripts
 
